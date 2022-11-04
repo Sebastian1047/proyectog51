@@ -9,7 +9,7 @@ app.use(express.json());
 //app.use('/usuarios',blogRoutes)
 
 app.get('/',(req,res)=>{
-    res.send('hola mundo como anda')
+    res.send('hola mundo como andan en el 2022')
 })
 app.listen(8000,console.log('servidor corriendo en http://localhost:3000/'))
 
