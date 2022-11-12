@@ -1,5 +1,6 @@
 import express from "express";
 import cors from 'cors'
+import {router} from './routes/routes.js'
 
 //import blogRoutes from './routes/routes.js'
 
@@ -7,9 +8,10 @@ const app=express();
 app.use(cors());
 app.use(express.json());
 //app.use('/usuarios',blogRoutes)
+app.use('/',router);
 
-app.get('/',(req,res)=>{
-    res.send('hola mundo como andan en el 2022')
+
+
+app.listen(8000,()=>{ console.log('servidor corriendo en http://localhost:3000/')
 })
-app.listen(8000,console.log('servidor corriendo en http://localhost:3000/'))
 
