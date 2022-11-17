@@ -2,12 +2,12 @@
 import mongoose from "mongoose";
 const userSchema=new mongoose.Schema(
     {
-        nombuser:{
+        nomuser:{
             type: String,
             require:true
         },
         password:{
-            type:string,
+            type:String,
             require:true
         },
         correo:{
@@ -15,8 +15,12 @@ const userSchema=new mongoose.Schema(
             require:true,
             unique:true
         }
+    },
+    {
+        timestamps: true,
+        versionKey: false
     }
 );
 
-export const usuario=mongoose.model('usuarios',userSchema);
+export const usuario=mongoose.model('users',userSchema);
 export default usuario;

@@ -12,6 +12,6 @@ app.use('/',router);
 
 
 
-app.listen(8000,()=>{ console.log('servidor corriendo en http://localhost:3000/')
+app.listen(8000,()=>{ console.log('servidor corriendo en http://localhost:8000/')
 })
 
